@@ -1,0 +1,88 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# BasicStatsByC
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+BasicStatsByc provides basic functions for statistical analysis and Bayesian statistics, including summary statistics, t-tests, chi-square tests, linear regression, Bayesian t-tests, Bayesian linear regression, and Bayesian correlation. A few of those functions comes with a (optional) plot. 
+
+## Installation
+
+You can install the development version of BasicStatsByC like so:
+
+``` r
+install.packages("devtools")
+
+# Install BasicStatsByC from GitHub
+devtools::install_github("Reiskorn03/BasicStatsByC")
+```
+
+## Example
+
+Here, all functions in the BasicStatsByC package are listed in an example usage using the **mtcars** dataset.
+
+Example usage summary_stats: 
+
+```{r example summary_stats}
+library(BasicStatsByC)
+
+# Compute summary statistics for the mtcars dataset
+summary_stats(mtcars)
+
+```
+
+Example usage t_test: 
+
+```{r example t-test}
+# Perform a t-test comparing mpg between automatic and manual transmissions
+t_test(mtcars, "am", "mpg")
+```
+
+Example usage chi_square_test:
+
+```{r example chi-square test}
+# Perform a chi-square test between the number of cylinders and the number of gears
+chi_square_test(mtcars, "cyl", "gear")
+```
+
+Example usage simple_lm: 
+
+```{r example lr}
+# Fit a linear regression model of mpg on weight
+simple_lm(mtcars, mpg ~ wt)
+```
+
+Example usage bayesian_t_test: 
+
+```{r example Bayesian t-test}
+# Perform a Bayesian t-test comparing mpg between automatic and manual transmissions
+bayesian_t_test(mtcars, "am", "mpg")
+```
+
+Example usage bayesian_lm: 
+
+```{r Bayesian linear regression model}
+# Fit a Bayesian linear regression model of mpg on weight
+bayesian_lm(mtcars, mpg ~ wt)
+```
+
+Example usage bayesian_correlation:
+
+```{r Bayesian correlation}
+# Compute Bayesian correlation between mpg and weight
+bayesian_correlation(mtcars, "mpg", "wt")
+```

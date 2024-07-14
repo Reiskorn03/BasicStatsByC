@@ -1,0 +1,18 @@
+Package: BasicStatsByC
+Title: Basic (Bayesian) Statistic functions 
+Version: 0.0.0.9000
+Authors@R: 
+    person("Chanyoung", "Woo", , "c.woo@camppus.lmu.de", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: BasicStatsByC provides basic functions for statistical analysis and Bayesian statistics, including summary statistics, t-tests, chi-square tests, linear regression, Bayesian t-tests, Bayesian linear regression, and Bayesian correlation. A few of those functions comes with a (optional) plot. 
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+	stats,
+	BayesFactor
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.1
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
